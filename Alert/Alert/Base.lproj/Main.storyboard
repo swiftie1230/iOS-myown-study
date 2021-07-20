@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightbulb.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-YM-AEH">
+                                <rect key="frame" x="16" y="43" width="358" height="682"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS1-ay-6Z7">
+                                <rect key="frame" x="40" y="760" width="30" height="30"/>
+                                <state key="normal" title="켜기"/>
+                                <connections>
+                                    <action selector="btnLampOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNI-p1-lz1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-or-HGR">
+                                <rect key="frame" x="320" y="760" width="30" height="30"/>
+                                <state key="normal" title="제거"/>
+                                <connections>
+                                    <action selector="btnLampRemove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEN-N2-4y9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Liu-Ye-0Ib">
+                                <rect key="frame" x="180" y="760" width="30" height="30"/>
+                                <state key="normal" title="끄기"/>
+                                <connections>
+                                    <action selector="btnLampOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K63-Nu-rxJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Liu-Ye-0Ib" firstAttribute="centerY" secondItem="NS1-ay-6Z7" secondAttribute="centerY" id="5tK-bi-pfI"/>
+                            <constraint firstItem="sgQ-or-HGR" firstAttribute="centerY" secondItem="NS1-ay-6Z7" secondAttribute="centerY" id="IlH-rC-ehl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NS1-ay-6Z7" secondAttribute="bottom" constant="20" id="PaH-AV-nRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sgQ-or-HGR" secondAttribute="trailing" constant="40" id="R8e-4b-djS"/>
+                            <constraint firstItem="NS1-ay-6Z7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="d2h-wD-ZyD"/>
+                            <constraint firstItem="Liu-Ye-0Ib" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9c-jV-Ilu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lampImg" destination="V7A-YM-AEH" id="093-2c-843"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="73.93364928909952"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

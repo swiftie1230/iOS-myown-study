@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PinchGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-kR-JaI">
+                                <rect key="frame" x="0.0" y="104" width="414" height="698"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyS-co-9kD">
+                                <rect key="frame" x="338" y="832" width="56" height="30"/>
+                                <state key="normal" title="다음 화면"/>
+                                <connections>
+                                    <segue destination="iGb-9p-FU6" kind="show" id="fe9-tj-Cwu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N4D-kR-JaI" secondAttribute="trailing" id="14g-3r-dU8"/>
+                            <constraint firstItem="N4D-kR-JaI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="P1r-pF-z5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N4D-kR-JaI" secondAttribute="bottom" constant="60" id="Pab-im-Sm3"/>
+                            <constraint firstItem="eyS-co-9kD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tgu-sr-f0H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eyS-co-9kD" secondAttribute="trailing" constant="20" id="qrI-DJ-tJr"/>
+                            <constraint firstItem="N4D-kR-JaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ygS-Oq-dms"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtPinch" destination="N4D-kR-JaI" id="CQ8-du-B7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="79"/>
+        </scene>
+        <!--Image Pinch View Controller-->
+        <scene sceneID="YSk-Zl-9mX">
+            <objects>
+                <viewController id="iGb-9p-FU6" customClass="ImagePinchViewController" customModule="PinchGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOL-bw-rge">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t3T-J9-uEg">
+                                <rect key="frame" x="0.0" y="60" width="414" height="688"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7it-FL-5aw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t3T-J9-uEg" firstAttribute="top" secondItem="7it-FL-5aw" secondAttribute="top" constant="60" id="FRN-iD-dJB"/>
+                            <constraint firstItem="7it-FL-5aw" firstAttribute="trailing" secondItem="t3T-J9-uEg" secondAttribute="trailing" id="mEX-0X-DtL"/>
+                            <constraint firstItem="t3T-J9-uEg" firstAttribute="leading" secondItem="7it-FL-5aw" secondAttribute="leading" id="qKD-v5-F6Q"/>
+                            <constraint firstItem="7it-FL-5aw" firstAttribute="bottom" secondItem="t3T-J9-uEg" secondAttribute="bottom" constant="60" id="qnA-sO-okD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3pz-db-P9D"/>
+                    <connections>
+                        <outlet property="imgPinch" destination="t3T-J9-uEg" id="Ttn-eo-pzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqG-ZU-B6G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="7.jpg" width="3024" height="3024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
